@@ -17,6 +17,7 @@
             </div>
         @endforeach
         {{$posts->links()}}
+        {{-- pagination i guess --}}
     @else
         <p>No posts found</p>
     @endif

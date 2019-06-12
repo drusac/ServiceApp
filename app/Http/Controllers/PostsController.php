@@ -154,11 +154,6 @@ class PostsController extends Controller
         }
         $post->save();
 
-        if ($request->hasFile('cover_image')){
-            Storage::delete('public/cover_images/' . $post->cover_image);
-            $post->cover_image = $fileNameToStore;
-        }
-
         return redirect('/posts')->with('success', 'Post Updated');
     }
 
@@ -180,6 +175,11 @@ class PostsController extends Controller
             // Delete Image
             Storage::delete('public/cover_images/'.$post->cover_image);
         }
+
+        // if ($request->hasFile('cover_image')){
+        //     Storage::delete('public/cover_images/' . $post->cover_image);
+        //     $post->cover_image = $fileNameToStore;
+        // }
 
         $post->delete();
         return redirect('/posts')->with('success', 'Post Removed');

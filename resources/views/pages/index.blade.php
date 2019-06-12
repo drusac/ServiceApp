@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="jumbotron text-center">
-        <h1>Welcome To Ventex Service Applicationaaaaaaaaaaaaaaaa</h1>
+        <h1>Welcome To Ventex Service App</h1>
         <p>This is application for service orders built using Laravel PHP Framework @ Ventex d.o.o.</p>
         @guest
             <p>Please login to proceed</p>
